@@ -1,58 +1,73 @@
-<h1>JWipe - Disk Sanitization</h1>
+# 📁 QA Test Cases & Bug Reports – Sample Documentation
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+This repository includes examples of how I write test cases and document bugs in a structured and consistent way. These samples are intended to demonstrate QA best practices, attention to detail, and techniques used to maintain product quality throughout the testing cycle.
 
-<h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
-<br />
+---
 
+## 📂 Contents
 
-<h2>Languages and Utilities Used</h2>
+- `Test_Cases/` – Spreadsheet examples of functional, UI, regression, and cross-browser test cases.
+- `Bug_Reports/` – Examples of clear, reproducible bug reports with all necessary fields completed.
+- `Drive_Link.md` – Link to full test case and bug report files on Google Drive for detailed review.
 
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
+🔗 [Access to a few files here via Google Drive](https://drive.google.com/drive/folders/1nhu6YsH3euthr7lR5VwawLMwtv9DLitn?usp=drive_link)
 
-<h2>Environments Used </h2>
+---
 
-- <b>Windows 10</b> (21H2)
+## 🧩 Test Case Writing Approach
 
-<h2>Program walk-through:</h2>
+- **Structured Format**: All test cases follow a consistent layout:  
+  `Test ID`, `Title`, `Preconditions`, `Steps`, `Expected Result`, `Actual Result`, `Status`, `Severity`, `Priority`.
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+- **Clarity First**: Each step is written to be **easily followed** by any tester or stakeholder without prior knowledge of the feature.
 
-<!--
- ```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
---!>
+- **Risk-Based Testing**: Test cases are prioritized based on potential impact to users or system flow.
+
+- **Reusable Steps**: Common actions (e.g., login) are modularized for easy reuse across multiple test cases.
+
+- **Cross-Device Checks**: Separate columns or tags for desktop vs. mobile checks (useful for responsive UI).
+
+---
+
+## 🐞 Bug Reporting Style
+
+- **Complete Reproduction Steps**: All bugs are reported with clear steps that can be followed by developers with minimal back-and-forth.
+
+- **Consistent Templates**: Bug reports follow the same structure across platforms (Jira, YouTrack, ZephyrScale).
+
+- **Critical Thinking**: Bugs are evaluated in terms of severity, business impact, and visibility to end users.
+
+- **Attached Evidence**:
+  - Screenshots with highlighted areas
+  - Screen recordings when needed
+  - Network logs (for API issues)
+  - Device/environment info (especially for mobile-specific issues)
+
+---
+
+## 🔍 What I Focus On First
+
+When testing or reporting bugs, I typically prioritize:
+
+- **Core functionality** and high-impact user flows
+- **Input validation** (especially on forms and user-generated content)
+- **Edge cases** and unexpected inputs
+- **UI consistency** across browsers/devices
+- **Error handling** and response messaging
+- **API responses** (status codes, body content, response times)
+
+---
+
+## ✅ Summary
+
+These examples aim to show how test documentation and bug reporting can be:
+
+- Easy to follow  
+- Detailed but not overwhelming  
+- Consistently structured  
+- Developer-friendly  
+- Focused on real-world impact
+
+---
+
+> For a deeper review, please visit the Google Drive folder linked above, which contains downloadable .pdf samples and screenshots.
